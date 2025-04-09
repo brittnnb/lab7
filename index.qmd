@@ -1,0 +1,22 @@
+---
+title: lab7
+authors:
+  - name: Brittany Bobb 
+    affiliation: Colorado State 
+    roles: writing
+    corresponding: true
+  - name: Louisa Beckett
+    affiliation: Colorado State 
+    roles: writing
+    corresponding: true
+  - name: Tayler Kordiak
+    affiliation: Colorado State 
+    roles: writing
+    corresponding: true
+  - name: Austin Sharrah
+    affiliation: Colorado State 
+    roles: writing
+    corresponding: true
+bibliography: references.bib
+---
+
