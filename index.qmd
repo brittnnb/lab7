@@ -45,6 +45,7 @@ Author: Tayler Kordiak
 
 After running through multiple linear regression tests and modeling whether or not the Earth Tec QZ impacts the zebra mussel distribution in the Robinson Bay and St. Alban’s Bay of Lake Minnetonka in Minnesota, we are surprised to report that the copper treatment only made a difference in Robinson Bay. After the copper treatment was instilled on July 22nd, we can see that the numbers in the mussel distribution go down significantly around all five testing sites, i.e., all five buoys. As for St. Alban’s Bay, there wasn’t enough significance to say for certain that the copper treatment played a role in affecting the zebra mussel distribution. Additionally, we tested supplemental data such as the water chemistry versus the mussel settlement to test whether the water chemistry had any implication on the mussel distribution. 
 *We are actively working on the analysis portion and will update the results and discussion section when completed*
+![](pre_post-exposure.png)
 
 
 *Discussion*
