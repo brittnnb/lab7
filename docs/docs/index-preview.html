@@ -1,48 +1,171 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="generator" content="quarto-1.5.57">
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Evaluating the Spread and Control of Zebra Mussels in U.S. Waterways</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
+    <title>Evaluating the Spread and Control of Zebra Mussels in U.S. Waterways</title>
+    <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+        vertical-align: middle;
+      }
+      /* CSS for syntax highlighting */
+      pre > code.sourceCode { white-space: pre; position: relative; }
+      pre > code.sourceCode > span { line-height: 1.25; }
+      pre > code.sourceCode > span:empty { height: 1.2em; }
+      .sourceCode { overflow: visible; }
+      code.sourceCode > span { color: inherit; text-decoration: inherit; }
+      div.sourceCode { margin: 1em 0; }
+      pre.sourceCode { margin: 0; }
+      @media screen {
+      div.sourceCode { overflow: auto; }
+      }
+      @media print {
+      pre > code.sourceCode { white-space: pre-wrap; }
+      pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+      }
+      pre.numberSource code
+        { counter-reset: source-line 0; }
+      pre.numberSource code > span
+        { position: relative; left: -4em; counter-increment: source-line; }
+      pre.numberSource code > span > a:first-child::before
+        { content: counter(source-line);
+          position: relative; left: -1em; text-align: right; vertical-align: baseline;
+          border: none; display: inline-block;
+          -webkit-touch-callout: none; -webkit-user-select: none;
+          -khtml-user-select: none; -moz-user-select: none;
+          -ms-user-select: none; user-select: none;
+          padding: 0 4px; width: 4em;
+        }
+      pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+      div.sourceCode
+        {   }
+      @media screen {
+      pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+      }
+      /* CSS for citations */
+      div.csl-bib-body { }
+      div.csl-entry {
+        clear: both;
+        margin-bottom: 0em;
+      }
+      .hanging-indent div.csl-entry {
+        margin-left:2em;
+        text-indent:-2em;
+      }
+      div.csl-left-margin {
+        min-width:2em;
+        float:left;
+      }
+      div.csl-right-inline {
+        margin-left:2em;
+        padding-left:1em;
+      }
+      div.csl-indent {
+        margin-left: 2em;
+      }    </style>
+
+    <style>
+      body.hypothesis-enabled #quarto-embed-header {
+        padding-right: 36px;
+      }
+
+      #quarto-embed-header {
+        height: 3em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px;
+      }
+
+      #quarto-embed-header h6 {
+        font-size: 1.1em;
+        padding-top: 0.6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-weight: 400;
+      }
+
+      #quarto-embed-header a.quarto-back-link,
+      #quarto-embed-header a.quarto-download-embed {
+        font-size: 0.8em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+
+      .quarto-back-container {
+        padding-left: 0.5em;
+        display: flex;
+      }
+
+      .headroom {
+          will-change: transform;
+          transition: transform 200ms linear;
+      }
+
+      .headroom--pinned {
+          transform: translateY(0%);
+      }
+
+      .headroom--unpinned {
+          transform: translateY(-100%);
+      }      
+    </style>
+
+    <script>
+    window.document.addEventListener("DOMContentLoaded", function () {
+
+      var header = window.document.querySelector("#quarto-embed-header");
+      const titleBannerEl = window.document.querySelector("body > #title-block-header");
+      if (titleBannerEl) {
+        titleBannerEl.style.paddingTop = header.clientHeight + "px";
+      }
+      const contentEl = window.document.getElementById('quarto-content');
+      for (const child of contentEl.children) {
+        child.style.paddingTop = header.clientHeight + "px";
+        child.style.marginTop = "1em";
+      }
+
+      // Use the article root if the `back` call doesn't work. This isn't perfect
+      // but should typically work
+      window.quartoBackToArticle = () => {
+        var currentUrl = window.location.href;
+        window.history.back();
+        setTimeout(() => {
+            // if location was not changed in 100 ms, then there is no history back
+            if(currentUrl === window.location.href){              
+                // redirect to site root
+                window.location.href = "index.html";
+            }
+        }, 100);
+      }
+
+      const headroom = new window.Headroom(header, {
+        tolerance: 5,
+        onPin: function () {
+        },
+        onUnpin: function () {
+        },
+      });
+      headroom.init();
+    });
+    </script>
+
+    
+<script src="site_libs/manuscript-notebook/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -56,15 +179,13 @@ div.csl-indent {
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<script async="" src="https://hypothes.is/embed.js"></script>
+     <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
     document.body.classList.add('hypothesis-enabled');
   });
-</script>
-
-
-<meta name="citation_title" content="Evaluating the Spread and Control of Zebra Mussels in U.S. Waterways">
+</script>  
+      <meta name="citation_title" content="Evaluating the Spread and Control of Zebra Mussels in U.S. Waterways">
 <meta name="citation_author" content="Brittany Bobb">
 <meta name="citation_author" content="Louisa Beckett">
 <meta name="citation_author" content="Tayler Kordiak">
@@ -81,9 +202,16 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=Copper kills fish, but not all copper is created equal - zebra mussel myth #4;,citation_author=B. Showalter;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;,citation_fulltext_html_url=https://earthtecqz.com/zebra-mussels/zebra-mussel-myth-4-copper-kills-fish/;">
 </head>
 
-<body>
+  <body class="quarto-notebook">
+    <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
+      
+      <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
+      <h6><i class="bi bi-journal-code"></i> Article Notebook</h6>
 
-<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+            <a href="./index.qmd" class="btn btn-primary quarto-download-embed" download="index.qmd">Download Source</a>
+          </div>
+
+     <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Evaluating the Spread and Control of Zebra Mussels in U.S. Waterways</h1>
@@ -138,7 +266,7 @@ div.csl-indent {
               </div>
       </div>
       <div class="quarto-title-meta-column-end quarto-other-formats-target">
-      <div class="quarto-alternate-formats"><div class="quarto-title-meta-heading">Other Formats</div><div class="quarto-title-meta-contents"><p><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></p></div><div class="quarto-title-meta-contents"><p><a href="index-meca.zip" data-meca-link="true"><i class="bi bi-archive"></i>MECA Bundle</a></p></div></div></div>
+      </div>
     </div>
 
 
@@ -149,16 +277,11 @@ div.csl-indent {
 <div id="quarto-sidebar-toc-left" class="sidebar toc-left">
   
 </div>
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="index-preview.html"><i class="bi bi-journal-code"></i>Article Notebook</a></li><li><a href="docs\index-preview.html"><i class="bi bi-journal-code"></i>Evaluating the Spread and Control of Zebra Mussels in U.S. Waterways</a></li></ul></div></div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-
-
-  
-
-
-<p><strong>Abstract</strong></p>
+     <p><strong>Abstract</strong></p>
 <p>Author : Louisa Beckett</p>
 <p>Zebra mussels (Dreissena polymorpha) pose a significant threat to freshwater ecosystems. This study investigates the impact of low-dose copper treatment (EarthTec QZ) on zebra mussel mortality in two separate bays within Lake Minnetonka, Minnesota: the relatively isolated St.&nbsp;Albans Bay and the more open Robinson Bay. We hypothesized that St.&nbsp;Albans Bay would exhibit higher copper concentrations and greater zebra mussel mortality due to reduced water mixing compared to Robinson Bay. Using a publicly available USGS dataset spanning July to October 2019, we analyzed trends in zebra mussel density and copper concentrations across five buoys in each bay. Faceted time-series plots revealed a substantial reduction in zebra mussel populations in St.&nbsp;Albans Bay following a 10-day copper treatment period, whereas Robinson Bay maintained significantly higher mussel densities. A paired t-test comparing copper levels at selected buoys in both bays demonstrated statistically significant differences (p = 0.0401), supporting the notion that the open morphology of Robinson Bay led to lower and more variable copper concentrations. While water quality parameters – dissolved oxygen, pH, and temperature – remained relatively stable, slight downward trends in dissolved oxygen and pH were observed in St.&nbsp;Albans Bay during treatment. Our findings suggest that bay morphology plays an important role in the effectiveness of localized copper treatments for zebra mussel control. It also highlights the importance of considering site-specific characteristics for targeted management strategies.</p>
 <p><strong>Introduction</strong></p>
@@ -175,27 +298,124 @@ div.csl-indent {
 <p><strong>Results</strong></p>
 <p>Author: Tayler Kordiak</p>
 <p>After making a faceted time series plot with Total (mussel) Count vs.&nbsp;Date (Figure 1) we can see that Robinson’s Bay (Figure 1, left) had significantly more zebra mussels than St.&nbsp;Albans Bay (Figure 1, right). However, the treatment in St.&nbsp;Albans Bay did a better job at almost eliminating the mussels completely from the Bay. Post-exposure, Robinson’s Buoy numbers 1, 3, and 5 all still had between 350,000 and 380,000 mussels, while St.&nbsp;Albans Buoys post-exposure had almost 0-200 mussels. Our hypothesis states, we believe St.&nbsp;Albans Bay copper treatment will be more effective because the bay’s opening to the rest of the lake is much smaller than that of Robinson’s Bay, thus assuming that St.&nbsp;Albans will have a lower zebra mussel distribution post-treatment. In that same note, we ran another faceted time series plot, Copper Levels vs.&nbsp;Date (Figure 2). We wanted to see whether or not the amount of the EarthTec QZ differed from bay to bay. As shown in Figure 2, there are obvious differences in the levels, Robinson’s Bay (Figure 2, left) had varying levels of copper surrounding each testing site between 2-23 μg/L with an outlier on August 1st which we can disregard, and St.&nbsp;Albans Bay (Figure 2, right) had copper levels between 57-125 μg/L. These levels were pretty consistent during the 10 experimental days of July 21st and July 31st, but it is clear that St.&nbsp;Albans Bay had higher levels of the copper treatment, and our assumption from that is because of the openness of Robinson’s Bay compared to St.&nbsp;Albans Bay. The more mixing of untreated water with the treated water leads to a decrease in effectiveness.</p>
-<div class="cell">
+<p><em>Code:</em></p>
+<p>We realize that we have simply compared the two bays thus far using faceted time-series graphs, so we wanted to run a paired t-test, which could tell us if there is significance between the two bays. We decided to run the test on copper levels of Buoy 4 and Buoy 5 in both Robinson’s and St.&nbsp;Albans Bay to showcase statistical significance. After running the test, we got a p-value of 0.0401 and a t-value of 2.137 which is great and shows statistical significance (Table 1). There was clearly a difference between copper levels between bays, and more specifically between Buoy 4 and 5. Thus, we can reject the null hypothesis of there not being a difference in copper level between Robinson’s Bay and St.&nbsp;Albans Bay, and say with confidence that the openness to Lake Minnetonka of Robinson’s Bay can explain the lesser amount of copper at the five testing sites. Additionally, proving that the effectiveness of the copper treatment was more successful at the testing sites in St.&nbsp;Albans Bay. The copper treatment halted once the 10 days were up, this can be seen in Figure 2, and the levels of the copper started to decrease in both bays. This is a good thing because there is research out there that attests that extended use of EarthTec QZ can cause damage to the lake and aquatic life that reside there. This is because EarthTec QZ is copper in the form of biologically available copper, copper sulfate pentahydrate, which is acidic, thus turning the lake more acidic, or through killing algae, which will in turn consume the available oxygen within the lake <span class="citation" data-cites="showalter2019copper">(<a href="#ref-showalter2019copper" role="doc-biblioref">Showalter 2019</a>)</span>. This is why we wanted to add supplemental data that was in the data we obtained from the original experiment, as exhibited by Figure 3. In Figure 3, again, we have another faceted time-series graph which contains the Robinson’s Bay (Figure 3, left) and St.&nbsp;Albans Bay (Figure 3, right) with graphs depicting Dissolved Oxygen (mg/L) (Figure 3, top left, top right), pH (Figure 3, middle left, middle right) and Temperature (℃) (Figure 3, bottom left, bottom right) for both bays. We felt it was necessary to add this supplemental data in our report because we wanted to see if the copper treatment would have an effect on the Dissolved Oxygen, pH, or Temperature of the water, or the other way around. We hypothesized that these three factors could have been confounding variables that may have affected the ability for the copper treatment to do its job. From Figure 3, we can see that their Dissolved Oxygen, pH, and Temperature were not affected and did not seem to make a difference on the copper level or the effectiveness of the treatment itself. However, in St.&nbsp;Albans Bay, Dissolved Oxygen (Figure 3, right, top) and pH (Figure 3, right, middle) did have a downward trend during the time of the experiment. As for Robinson’s Bay, both Dissolved Oxygen (Figure 3, left, top) and pH (Figure 3, left, middle) had pretty steady levels, averaging about the same throughout the experiment days. This can be explained by the higher levels of copper within St.&nbsp;Albans Bay from Figure 2. Temperature did not seem to be affected by the copper treatment or vice versa during the experiment.</p>
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mussel_settlement <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"C:/Users/bnb26/OneDrive/Desktop/ESS330/lab7/lab7/ZebraMusselSettlement.csv"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>copper_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"C:/Users/bnb26/OneDrive/Desktop/ESS330/lab7/lab7/CopperData.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>mussle_group <span class="ot">&lt;-</span> mussel_settlement <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">count_numeric =</span> <span class="fu">as.numeric</span>(Count.m.)) <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Bay, Buoy.., Collection.Date) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">total_count =</span> <span class="fu">sum</span>(count_numeric, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(Collection.Date, Buoy.., Bay, total_count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: There was 1 warning in `mutate()`.
+ℹ In argument: `count_numeric = as.numeric(Count.m.)`.
+Caused by warning:
+! NAs introduced by coercion</code></pre>
+</div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mussle_group <span class="ot">&lt;-</span> mussle_group <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">Buoy =</span> Buoy..)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mussle_group, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.Date</span>(Collection.Date, <span class="at">format =</span> <span class="st">"%m/%d/%Y"</span>), </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">y =</span> total_count, </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>                        <span class="at">color =</span> Buoy)) <span class="sc">+</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">0.75</span>) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Bay, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Pre-exposure vs Post-exposure Mussel Count by Buoy"</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Date"</span>, <span class="at">y =</span> <span class="st">"Total Count"</span>) <span class="sc">+</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(plot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
+<div class="">
 <figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p class=""><a href="index_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
-<a class="quarto-notebook-link" id="nblink-1" href="index-preview.html">Source: Article Notebook</a></div>
+</div></div>
 <p><em>Figure 1. Faceted Time-Series Graphs of Robinson’s Bay (left) and St.&nbsp;Albans Bay (right) with Total Count on the y-axis and Date on the x-axis, split by Buoy</em></p>
-<div class="cell">
+<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"C:/Users/bnb26/OneDrive/Desktop/ESS330/lab7/lab7/images/plot.png"</span>, <span class="at">plot =</span> plot, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [6]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>copper_group <span class="ot">&lt;-</span> copper_data <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Bay, Buoy.., Copper..µg.L., Date) <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">copper_amount =</span> <span class="fu">sum</span>(Copper..µg.L., <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(copper_amount, Buoy.., Bay, Date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [7]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>copper_data <span class="ot">&lt;-</span> copper_data <span class="sc">%&gt;%</span> <span class="fu">rename</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [8]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>copper_average <span class="ot">&lt;-</span> copper_data <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Bay, Buoy.., Date) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">copper_amount =</span> <span class="fu">mean</span>(Copper..µg.L., <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(copper_amount, Buoy.., Bay, Date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [9]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>copper_average <span class="ot">&lt;-</span> copper_average <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">Buoy =</span> Buoy..)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [10]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>copper_average <span class="ot">&lt;-</span> copper_average <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Buoy <span class="sc">!=</span> <span class="st">"Composite"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [11]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>copper_plot2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(copper_average, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.Date</span>(Date, <span class="at">format =</span> <span class="st">"%m/%d/%Y"</span>), </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">y =</span> copper_amount, </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">color =</span> Buoy)) <span class="sc">+</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">0.35</span>) <span class="sc">+</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Bay, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Copper Treatment Levels During Duration of Experiment"</span>,</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Date"</span>, <span class="at">y =</span> <span class="st">"Copper levels (µg/L)"</span>) <span class="sc">+</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(copper_plot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 5 rows containing missing values or values outside the scale range
+(`geom_line()`).</code></pre>
+</div>
 <div class="cell-output-display">
-<div>
+<div class="">
 <figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-11-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p class=""><a href="index_files/figure-html/unnamed-chunk-11-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
-</div>
+</div></div>
 <p><em>Figure 2. Faceted Time-Series Graphs of Robinson’s Bay (left) and St.&nbsp;Albans Bay (right) with Copper levels (μg/L) on the y-axis and Date on the x-axis, split by Buoy</em></p>
-<div class="cell">
+<div class="cell-container"><div class="cell-decorator"><pre>In [12]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"C:/Users/bnb26/OneDrive/Desktop/ESS330/lab7/lab7/images/copper_plot2.png"</span>, <span class="at">plot =</span> copper_plot2, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 5 rows containing missing values or values outside the scale range
+(`geom_line()`).</code></pre>
+</div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [13]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>paired_data4 <span class="ot">&lt;-</span> copper_average <span class="sc">%&gt;%</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Buoy <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"B4"</span>, <span class="st">"B5"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Buoy, <span class="at">values_from =</span> copper_amount) <span class="sc">%&gt;%</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(B4) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(B5))</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(paired_data4<span class="sc">$</span>B4, paired_data4<span class="sc">$</span>B5, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Paired t-test
@@ -209,24 +429,53 @@ sample estimates:
 mean difference 
        4.391094 </code></pre>
 </div>
-</div>
-<div class="cell">
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [14]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>water_chemistry <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"C:/Users/bnb26/OneDrive/Desktop/ESS330/lab7/lab7/WaterChemistry.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [15]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>water_chemistry <span class="ot">&lt;-</span> water_chemistry <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">Temperature =</span> Temperature...C.)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [16]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>waterchem_long <span class="ot">&lt;-</span> water_chemistry <span class="sc">%&gt;%</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(pH, Dissolved.Oxygen..mg.L., Temperature),</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"variable"</span>,</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"value"</span>)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>waterchem_long<span class="sc">$</span>variable <span class="ot">&lt;-</span> <span class="fu">recode</span>(waterchem_long<span class="sc">$</span>variable,</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">pH =</span> <span class="st">"pH"</span>,</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">Dissolved.Oxygen..mg.L. =</span> <span class="st">"Dissolved Oxygen (mg/L)"</span>,</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">Temperature =</span> <span class="st">"Temperature (°C)"</span>)</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>supplemental_plots <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(waterchem_long, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.Date</span>(Date, <span class="at">format =</span> <span class="st">"%m/%d/%Y"</span>), <span class="at">y =</span> value, <span class="at">color =</span> Buoy..)) <span class="sc">+</span></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(variable), <span class="at">cols =</span> <span class="fu">vars</span>(Bay), <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Dissolved Oxygen, pH, and Temperature for Both Bays"</span>, <span class="at">x =</span> <span class="st">"Date"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">color =</span> <span class="st">"Buoy"</span>) <span class="sc">+</span></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">6</span>),</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(supplemental_plots)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
+<div class="">
 <figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-16-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p class=""><a href="index_files/figure-html/unnamed-chunk-16-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
-</div>
+</div></div>
 <p><em>Figure 3. Faceted Time-Series Graphs showing Robinson’s Bay (left) St.&nbsp;Albans Bay (right) with Date on the x-axis and Dissolved Oxygen (mg/L) (top, left and right), pH (middle, left and right), and Temperature (℃) (bottom, left and right) on the y-axis</em></p>
-<p>We realize that we have simply compared the two bays thus far using faceted time-series graphs, so we wanted to run a paired t-test, which could tell us if there is significance between the two bays. We decided to run the test on copper levels of Buoy 4 and Buoy 5 in both Robinson’s and St.&nbsp;Albans Bay to showcase statistical significance. After running the test, we got a p-value of 0.0401 and a t-value of 2.137 which is great and shows statistical significance (Table 1). There was clearly a difference between copper levels between bays, and more specifically between Buoy 4 and 5. Thus, we can reject the null hypothesis of there not being a difference in copper level between Robinson’s Bay and St.&nbsp;Albans Bay, and say with confidence that the openness to Lake Minnetonka of Robinson’s Bay can explain the lesser amount of copper at the five testing sites. Additionally, proving that the effectiveness of the copper treatment was more successful at the testing sites in St.&nbsp;Albans Bay. The copper treatment halted once the 10 days were up, this can be seen in Figure 2, and the levels of the copper started to decrease in both bays. This is a good thing because there is research out there that attests that extended use of EarthTec QZ can cause damage to the lake and aquatic life that reside there. This is because EarthTec QZ is copper in the form of biologically available copper, copper sulfate pentahydrate, which is acidic, thus turning the lake more acidic, or through killing algae, which will in turn consume the available oxygen within the lake <span class="citation" data-cites="showalter2019copper">(<a href="#ref-showalter2019copper" role="doc-biblioref">Showalter 2019</a>)</span>. This is why we wanted to add supplemental data that was in the data we obtained from the original experiment, as exhibited by Figure 3. In Figure 3, again, we have another faceted time-series graph which contains the Robinson’s Bay (Figure 3, left) and St.&nbsp;Albans Bay (Figure 3, right) with graphs depicting Dissolved Oxygen (mg/L) (Figure 3, top left, top right), pH (Figure 3, middle left, middle right) and Temperature (℃) (Figure 3, bottom left, bottom right) for both bays. We felt it was necessary to add this supplemental data in our report because we wanted to see if the copper treatment would have an effect on the Dissolved Oxygen, pH, or Temperature of the water, or the other way around. We hypothesized that these three factors could have been confounding variables that may have affected the ability for the copper treatment to do its job. From Figure 3, we can see that their Dissolved Oxygen, pH, and Temperature were not affected and did not seem to make a difference on the copper level or the effectiveness of the treatment itself. However, in St.&nbsp;Albans Bay, Dissolved Oxygen (Figure 3, right, top) and pH (Figure 3, right, middle) did have a downward trend during the time of the experiment. As for Robinson’s Bay, both Dissolved Oxygen (Figure 3, left, top) and pH (Figure 3, left, middle) had pretty steady levels, averaging about the same throughout the experiment days. This can be explained by the higher levels of copper within St.&nbsp;Albans Bay from Figure 2. Temperature did not seem to be affected by the copper treatment or vice versa during the experiment.</p>
+<div class="cell-container"><div class="cell-decorator"><pre>In [17]:</pre></div><div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"C:/Users/bnb26/OneDrive/Desktop/ESS330/lab7/lab7/images/supplemental_maps.png"</span>, <span class="at">plot =</span> supplemental_plots, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 <p><strong>Discussion &amp; Conclusion</strong></p>
 <p>Author: Lousia Beckett</p>
 <p>This study supports the hypothesis that bay morphology significantly influences the effectiveness of copper-based zebra mussel treatments. St.&nbsp;Albans Bay, which has a narrower connection to the rest of Lake Minnetonka, retained higher and more stable concentrations of EarthTec QZ, leading to a near-total reduction in zebra mussel populations across all five testing buoys. In contrast, Robinson’s Bay, with its wider mouth and greater rate of water exchange and mixing, maintained lower and more variable copper levels, resulting in substantially higher mussel densities post-treatment. This difference in treatment effectiveness is particularly visible after September 1st, when zebra mussel counts dropped sharply in St.&nbsp;Albans Bay whereas in Robinson’s Bay, the decrease was more gradual and had much less total change. The statistical significance observed in the paired t-test between Buoys 4 and 5 in both bays (p = 0.0401) reinforces the conclusion that bay openness affects mussel mortality. The more open Robinson’s Bay likely experienced increased mixing with untreated water from the main lake, diluting copper concentrations and reducing treatment effectiveness. This finding directly supports our hypothesis and emphasizes how geographic and hydrologic context plays a vital role in the success of aquatic invasive species interventions. Copper treatments don’t kill instantly; rather, they weaken zebra mussels over time, with mortality increasing as exposure lengthens. This is why copper application occurred in August while final population counts were recorded in September – to capture delayed treatment effects (Figures 1 &amp; 2). The data also suggest that copper has a delayed effect, with zebra mussel mortality increasing over time as exposure accumulates. This relationship underscores the importance of maintaining effective treatment concentrations over a sustained period – in this case, the 10-day treatment window – to maximize impact on zebra mussel larvae and newly settled individuals. While these findings are promising, there are limitations to our analysis. Both bays are connected to Lake Minnetonka, which introduces several potential confounding variables including water flow, organism dispersal, and external nutrients from runoff and such. Although St.&nbsp;Albans and Robinson’s Bays differ in their degree of isolation, both are influenced to some extent by lake-wide processes. This complicates our efforts to attribute population changes solely to treatment application. Environmental variables such as dissolved oxygen, pH, and temperature remained mostly stable during the study (Figure 3), but subtle downward trends in dissolved oxygen and pH in St.&nbsp;Albans Bay suggest potential interactions between copper exposure and aquatic chemistry that demand further investigation. Despite these challenges, our results have broader relevance for environmental data science and invasive species management. They highlight the importance of controlled experimental design, careful site selection, and accounting for spatial variability when interpreting treatment outcomes. Replicating this study across different geographic settings and expanding the survey window beyond three months would help validate the effectiveness and ecological safety of EarthTec QZ in diverse aquatic systems. This study provides evidence that low-dose copper treatments can be an effective, environmentally mindful method for zebra mussel control – especially when deployed in geographically favorable conditions such as partially closed off bays. These findings could inform predictive models used by lake managers to prioritize treatment sites based on bay geography and water exchange rates. Future work should continue to integrate spatial analysis, environmental monitoring, and advanced modeling techniques to optimize treatment strategies and reduce the ecological and economic impacts of invasive mussel populations.</p>
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-ca_water_mussels_2019" class="csl-entry" role="listitem">
 Board, California State Water Resources Control. 2019. <span>“Prevent the Spread of Mussels.”</span> <a href="https://water.ca.gov/News/Blog/2019/May-2019/Prevent-the-Spread-of-Mussels">https://water.ca.gov/News/Blog/2019/May-2019/Prevent-the-Spread-of-Mussels</a>.
 </div>
@@ -251,9 +500,9 @@ Survey, U. S. Geological. 2025. <span>“What Are Zebra Mussels and Why Should W
 <div id="ref-univar_earthtec_qz" class="csl-entry" role="listitem">
 Univar Solutions. n.d. <span>“EarthTec<sup></sup> QZ.”</span> <a href="https://www.univarsolutions.com/product-categories/solvents/additional-solvents/earthtec-qz" class="uri">https://www.univarsolutions.com/product-categories/solvents/additional-solvents/earthtec-qz</a>.
 </div>
-</div></section></div></main>
-<!-- /main column -->
-<script id="quarto-html-after-body" type="application/javascript">
+</div>
+     </main>
+<!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -672,9 +921,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-</div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
@@ -705,9 +952,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   };
   
 })();
-          </script>
-
-
-
-
+          </script> 
+  
 </body></html>
